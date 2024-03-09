@@ -1,5 +1,5 @@
 fun main() {
-    val arr = arrayOfNulls<String>(readln().toInt())
+    val arr = Array(readln().toInt(), { item -> "" } )
 
     val arr2 = readln().split(" ")
 
