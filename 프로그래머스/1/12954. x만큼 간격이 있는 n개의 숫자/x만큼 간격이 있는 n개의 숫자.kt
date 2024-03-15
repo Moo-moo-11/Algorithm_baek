@@ -1,8 +1,8 @@
 class Solution {
-    fun solution(x: Int, n: Int): DoubleArray {
-        var answer = DoubleArray(n)
+    fun solution(x: Int, n: Int): LongArray {
+        var answer = LongArray(n)
         for (i in 1..n){
-            answer[i-1] = x.toDouble() * i.toDouble()
+            answer[i-1] = x.toLong() * i.toLong()
         }
         return answer
     }
