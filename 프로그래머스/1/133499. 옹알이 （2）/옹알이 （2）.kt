@@ -7,11 +7,11 @@ class Solution {
             if ("yeye" in str) continue
             if ("woowoo" in str) continue
             if ("mama" in str) continue
-            if ("aya" in str) str = str.replace("aya", " ")
-            if ("ye" in str) str = str.replace("ye", " ")
-            if ("woo" in str) str = str.replace("woo", " ")
-            if ("ma" in str) str = str.replace("ma", " ")
-            if (" " in str) str = str.replace(" ", "")
+            str = str.replace("aya", " ")
+            str = str.replace("ye", " ")
+            str = str.replace("woo", " ")
+            str = str.replace("ma", " ")
+            str = str.replace(" ", "")
             if (str == "") answer++
         }
         return answer
