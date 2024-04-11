@@ -1,10 +1,8 @@
-import kotlin.math.*
-
 class Solution {
     fun solution(brown: Int, yellow: Int): IntArray {
         val total = brown + yellow
         val answer = IntArray(2)
-        for (i in 3..round(sqrt(total.toDouble())).toInt()) {
+        for (i in 3..total) {
             if (total%i==0) {
                 val a = total/i
                 val b = i
