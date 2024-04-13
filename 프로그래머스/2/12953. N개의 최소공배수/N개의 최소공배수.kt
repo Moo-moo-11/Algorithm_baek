@@ -6,8 +6,8 @@ class Solution {
         for (i in 1..arr.size-1) {
             var minDivisor = 1
             
-            var a = max(arr[i], commonMultiple)
-            var b = min(arr[i], commonMultiple)
+            var a = if(arr[i] > commonMultiple) arr[i] else commonMultiple
+            var b = if(arr[i] > commonMultiple) commonMultiple else arr[i]
             
             while (b != 0) {
                 val r = a%b
