@@ -1,9 +1,56 @@
 class Solution {
     fun solution(s: String): Int {
-        var str = s
-        val pairlist = listOf(Pair("one", "1"), Pair("two","2"), Pair("three","3"), Pair("four","4"), Pair("five","5"), Pair("six","6"), Pair("seven","7"), Pair("eight","8"), Pair("nine","9"), Pair("zero","0"))
-        for (i in pairlist) if (i.first in str) str = str.replace(i.first,i.second)
-        val answer = str.toInt()
-        return answer
+        var answer = ""
+        var eng = ""
+        for(i in s){
+            if(i !in ('0'..'9')){
+                eng+=i
+                when(eng){
+                    "one" -> {
+                        answer += "1"
+                        eng = ""
+                    }
+                    "two" ->{
+                        answer += "2"
+                        eng = ""
+                    }
+                    "three" ->{
+                        answer += "3"
+                        eng = ""
+                    }
+                    "four" ->{
+                        answer += "4"
+                        eng = ""
+                    }
+                    "five" ->{
+                        answer += "5"
+                        eng = ""
+                    }
+                    "six" ->{
+                        answer += "6"
+                        eng = ""
+                    }
+                    "seven" ->{
+                        answer += "7"
+                        eng = ""
+                    }
+                    "eight" ->{
+                        answer += "8"
+                        eng = ""
+                    }
+                    "nine" ->{
+                        answer += "9"
+                        eng = ""
+                    }
+                    "zero" ->{
+                        answer += "0"
+                        eng = ""
+                    }
+                }
+            }else{
+                answer+=i
+            }
+        }
+        return answer.toInt()
     }
 }
