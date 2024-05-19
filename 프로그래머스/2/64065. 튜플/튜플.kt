@@ -1,8 +1,9 @@
 class Solution {
     fun solution(s: String): IntArray {
-        val list = s.split(",").map {it.replace("{","").replace("}","").toInt()}
-        val maps: HashMap<Int,Int> = hashMapOf()
-        for (number in list) {
+        val list = s.split(",")
+        val maps: HashMap<String,Int> = hashMapOf()
+        for (word in list) {
+            val number = word.replace("{","").replace("}","")
             maps[number] = maps.getOrDefault(number, 0) + 1
         }
         val answer = IntArray(maps.size)
