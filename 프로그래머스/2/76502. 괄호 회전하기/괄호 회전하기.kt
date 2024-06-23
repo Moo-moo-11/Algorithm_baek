@@ -2,24 +2,22 @@ class Solution {
     fun solution(s: String): Int {
         var answer = 0
         val pairList = listOf('[' to ']','{' to '}','(' to ')')
+        
         for (i in s.indices) {
-            val queue = ArrayDeque<Char>()
-            
+            val stack = ArrayDeque<Char>()
+
             for (j in s.indices) {
                 val char = s[(i+j)%s.length]
                 
-                if (queue.isEmpty()){
-                    queue.add(char)
-                } else if (queue.last() to char in pairList) {
-                    queue.removeLast()
+                if (stack.lastOrNull() to char in pairList) {
+                    stack.removeLast()
                 } else {
-                    queue.add(char)
-                }   
+                    stack.add(char)
+                }
             }
-            
-            if (queue.isEmpty()) answer++
+            if (stack.isEmpty()) answer++
         }
-        
+
         return answer
     }
 }
