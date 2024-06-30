@@ -6,8 +6,6 @@ class Solution {
         
         for ((index,numb) in numbers.withIndex()) {
             
-            numb.toString(2).split("0")
-            
             if (numb % 2 == 0L) {
                 answer[index] = numb + 1
             } else {
